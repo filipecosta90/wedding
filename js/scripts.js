@@ -210,7 +210,7 @@ $(document).ready(function () {
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUAssHLZRPUNcl3suNGdLBUw4gSbuhPThhQzsqWzqStS4xuwPgnq6n0psG7U6MycpJ/exec'
+        var scriptURL = 'https://script.google.com/macros/s/AKfycbxUAssHLZRPUNcl3suNGdLBUw4gSbuhPThhQzsqWzqStS4xuwPgnq6n0psG7U6MycpJ/exec'
         var data = $(this).serialize();
         $('#alert-wrapper').html(alert_markup('info', '<strong>Espera um segundo!</strong> Estamos a guardar os dados.'));
         $.post(scriptURL, data)
