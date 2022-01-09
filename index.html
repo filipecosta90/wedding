@@ -207,13 +207,13 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Confirmar presença</h3>
-                <p>Gostaríamos que nos confirmasses a tua presença preenchendo o seguinto formulário.</p>
+                <p>Gostaríamos que nos confirmasses a tua presença preenchendo o seguinte formulário.</p>
                 <p>Será através do email que colocares aqui que depois receberás uma cópia das fotos.</p>
-                <form id="submit-to-google-sheet" class="rsvp-form"
+                <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-9 col-sm-9">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="nome" class=""
                                                                  placeholder="O teu nome"
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-9 col-sm-9">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
                                                                      placeholder="O teu email"
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-9 col-sm-9">
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i><input type="number" name="total" class="" min="0"
                                                                   max="8"
@@ -247,24 +247,6 @@
                         Confirmar presença!
                     </button>
                 </form>
-
-                <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
-
-
-                <script>
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUAssHLZRPUNcl3suNGdLBUw4gSbuhPThhQzsqWzqStS4xuwPgnq6n0psG7U6MycpJ/exec'
-                    const form = document.forms['submit-to-google-sheet']
-                  
-                    form.addEventListener('submit', e => {
-                      e.preventDefault()
-                      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                        .then(response => console.log('Success!', response))
-                        .catch(error => console.error('Error!', error.message))
-                    })
-                  </script>
-
             </div>
         </div>
     </div>
